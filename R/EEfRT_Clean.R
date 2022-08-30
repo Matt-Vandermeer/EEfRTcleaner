@@ -137,3 +137,38 @@ Clean_Cognitive_EEfRT <- function(file_path, output_directory) {
   print(paste("Saving -", file_name_summary_data, "to", as.character(output_directory)))
   write.csv(x = cog_eefrt_summary, file = paste(output_directory, file_name_summary_data))
 }
+
+#loop through multiple csv files using EEfRTcleaner functions
+EEfRTcleanerLoop <- function(input, output, EEfRT_Type) {
+  #create a list "file_list" of all ".csv" files in the directory "input"
+  file_list = list.files(path = input,
+                         pattern="ACED.*.csv")
+
+  #if (length(file_list == 0)) {
+  #
+  #  print(paste0("There are no .csv files in the specified directory: \n\n ",input, "\n\nPlease choose another directory."))
+  #
+  #} else {
+  if (EEfRT_Type == "physical") {
+
+    for (i in file_list) {
+
+      writeLines(paste0("Cleaning and processing physical EEfRT behavioural data:", i))
+      EEfRTcleaner::Clean_Physical_EEfRT(file_path = file.path(input, i), output_directory = output)
+
+    }
+  } else if (EEfRT_Type == "cognitive") {
+
+    for (i in file_list) {
+
+      writeLines(paste("Cleaning and processing cognitive EEfRT behavioural data:", i))
+      EEfRTcleaner::Clean_Cognitive_EEfRT(file_path = file.path(input, i), output_directory = output)
+
+    }
+  } else {
+
+    writeLines(paste0("ERROR! \n\n You did not set a valid EEfRT_Type.\n\nPlease enter 'cognitive' if you are processing cognitive EEfRT behavioural data.\n\nPlease enter 'physical' if you are processing physical EEfRT behavioural data."))
+
+  }
+
+}
