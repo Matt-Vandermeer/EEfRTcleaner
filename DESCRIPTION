@@ -11,6 +11,6 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     dplyr,
-    magrittr,
-    write.csv
+    magrittr
+
 RoxygenNote: 7.2.1
