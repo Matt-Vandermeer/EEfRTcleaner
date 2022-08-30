@@ -1,0 +1,16 @@
+Package: EEfRTcleaner
+Type: Package
+Title: Cleans EEfRT Behavioural Data
+Version: 0.2.0
+Author: Matthew Richard John Vandermeer, PhD, CPsych (Supervised Practice)
+Maintainer: Matthew Richard John Vandermeer <dr.matt.vandermeer@protonmail.com>
+Description: Two functions for cleaning raw behavioural data from ACED study EEfRT (cognitive
+    and physical versions) protocols.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr,
+    magrittr,
+    write.csv
+RoxygenNote: 7.2.1

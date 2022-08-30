@@ -1,0 +1,11 @@
+library(EEfRTcleaner)
+library(EEfRTcleaner)
+Clean_Cognitive_EEfRT()
+detach("package:EEfRTcleaner", unload = TRUE)
+library(EEfRTcleaner)
+?Clean_Cognitive_EEfRT()
+git init
+pwd
+dir
+where
+who
