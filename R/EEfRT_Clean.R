@@ -158,15 +158,24 @@ EEfRTcleanerLoop <- function(input, output, EEfRT_Type) {
   #create a list "file_list" of all ".csv" files in the directory "input"
   file_list = list.files(path = input,
                          pattern="ACED.*.csv")
+  #let user know what .csv files were found in the directory
   writeLines(paste("Found the following files for processing:"))
   for (i in file_list) {
     writeLines(paste(i))
   }
-  #if (length(file_list == 0)) {
-  #
-  #  print(paste0("There are no .csv files in the specified directory: \n\n ",input, "\n\nPlease choose another directory."))
-  #
-  #} else {
+
+  #check if output directory exists and if not, create it
+  if (file.exists(output)) {
+    writeLines(paste("Good news! The output directory:", output, "exists!"))
+  } else {
+    writeLines(paste("Bad news! The output directory:", output, "does not exist!"))
+    dir.create(output)
+    writeLines(paste("Don't worry, I'll create", output, "for you!"))
+  }
+
+
+
+
   if (EEfRT_Type == "physical") {
 
     for (i in file_list) {
