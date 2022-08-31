@@ -5,7 +5,8 @@
 Loop through directory of CSV files to clean EEfRT behavioural data
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Function that takes a directory of ACED Cognitive/Physical EEfRT behavioural data set and reconstructs it
+into clean .csv data files using Clean_Cognitive_EEfRT or Clean_Physical_EEfRT functions from EEfRTcleaner package.
 }
 \usage{
 EEfRTcleanerLoop(input, output, EEfRT_Type)

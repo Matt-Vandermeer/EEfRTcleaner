@@ -17,12 +17,12 @@ Clean_Cognitive_EEfRT(file_path, output_directory)
   \item{file_path}{
   Full path of ACED cognitive EEfRT behavioural data .csv file to be processed.
 
-  e.g., "Z:\CPD Lab Studies\ACED\03_Data_and_Syntax\05_ERP_Data\02_Cognitive_EFFrT\01_Behavioural_Data\01_Data\ACED9999_CognitiveEEfRT.csv"
+  e.g., "Z:/CPD Lab Studies/ACED/03_Data_and_Syntax/05_ERP_Data/02_Cognitive_EFFrT/01_Behavioural_Data/01_Data/ACED9999_CognitiveEEfRT.csv"
 }
   \item{output_directory}{
   Full path of the directory where you want to save the processed .csv files to.
 
-  e.g., e.g., "Z:\CPD Lab Studies\ACED\03_Data_and_Syntax\05_ERP_Data\02_Cognitive_EFFrT\01_Behavioural_Data\01_Data\01_Baseline\"
+  e.g., e.g., "Z:/CPD Lab Studies/ACED/03_Data_and_Syntax/05_ERP_Data/02_Cognitive_EFFrT/01_Behavioural_Data/01_Data/01_Baseline/"
   }
 }
 \details{
